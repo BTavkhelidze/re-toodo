@@ -1,0 +1,14 @@
+.mainContaine {
+  //   max-width: 73.6rem;
+  //   width: 100%;
+  margin-top: 6.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .mainContent {
+    max-width: 73.6rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

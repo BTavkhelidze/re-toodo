@@ -1,0 +1,13 @@
+.emptyTodo {
+  padding-top: 6.4rem;
+  text-align: center;
+}
+.emptyTodo img {
+  margin-bottom: 1.6rem;
+}
+.emptyTodo p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgb(128, 128, 128);
+  line-height: 22.4px;
+}/*# sourceMappingURL=EmptyTodo.module.css.map */

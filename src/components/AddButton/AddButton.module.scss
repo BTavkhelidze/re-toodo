@@ -1,0 +1,15 @@
+.container {
+  background-color: rgba(30, 111, 159, 1);
+  border-radius: 0.8rem;
+  padding: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  .add {
+    margin-right: 0.8rem;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: rgba(242, 242, 242, 1);
+  }
+}

@@ -1,0 +1,7 @@
+.mainContainer {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  z-index: 2;
+  margin-top: -2.5rem;
+}/*# sourceMappingURL=AddTodo.module.css.map */

@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+.container .taskCreated {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgb(78, 168, 222);
+}
+.container .complated {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgb(130, 132, 250);
+}
+.container span {
+  padding: 0.2rem 0.8rem;
+  background-color: rgb(51, 51, 51);
+  border-radius: 999px;
+  color: rgb(217, 217, 217);
+}/*# sourceMappingURL=TaskMainHeader.module.css.map */
