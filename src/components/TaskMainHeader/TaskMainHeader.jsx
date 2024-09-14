@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './TaskMainHeader.module.scss';
 
-const TaskMainHeader = () => {
+const TaskMainHeader = (complated) => {
   return (
     <div className={style.container}>
       <p className={style.taskCreated}>
