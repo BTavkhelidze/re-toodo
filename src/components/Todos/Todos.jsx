@@ -5,9 +5,6 @@ const Todos = () => {
   return (
     <div className={style.container}>
       <Todo>
-        <p>beqaia adge adre</p>
-      </Todo>
-      <Todo>
         <p>
           Integer urna interdum massa libero auctor neque turpis turpis semper.
           Duis vel sed fames integer.
