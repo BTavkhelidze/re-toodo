@@ -7,13 +7,23 @@ import AddTodoForm from './components/AddTodo/AddTodoForm';
 import TaskMain from './components/TaskMain/TaskMain';
 
 function App() {
-  const [task, setTask] = useState([]);
+  const [tasks, setTasks] = useState([]);
+
+  const getFetch = async () => {
+    const url = 'http://localhost:3500/tasks';
+    const data = await apiRequest(url);
+    setTasks(data);
+  };
+
+  useEffect(() => {
+    getFetch();
+  }, []);
 
   return (
     <>
       <Logo />
-      <AddTodoForm onSetTask={setTask} task={task} />
-      <TaskMain onSetTask={setTask} task={task} />
+      <AddTodoForm onSetTask={setTasks} tasks={tasks} />
+      <TaskMain onSetTask={setTasks} tasks={tasks} />
     </>
   );
 }

@@ -1,5 +1,17 @@
 .container {
   display: flex;
   flex-direction: column;
+
   gap: 1.2rem;
+  p {
+    flex: 1;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 19.6px;
+    color: rgba(242, 242, 242, 1);
+  }
+  .uncomplated {
+    color: rgba(128, 128, 128, 1);
+    text-decoration: line-through;
+  }
 }
