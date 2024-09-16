@@ -3,19 +3,12 @@ import style from './Taskmain.module.scss';
 import TaskMainHeader from '../TaskMainHeader/TaskMainHeader';
 import TodoTaskContent from '../TodoTaskContent/TodoTaskContent';
 
-const TaskMain = ({ onSetTask, tasks }) => {
-  const [complated, setComplated] = useState(null);
-
+const TaskMain = ({ onRemoveTask, tasks }) => {
   return (
     <div className={style.mainContaine}>
       <div className={style.mainContent}>
-        <TaskMainHeader complated={complated} />
-        <TodoTaskContent
-          complated={complated}
-          onSetTask={onSetTask}
-          onSetComplated={setComplated}
-          tasks={tasks}
-        />
+        <TaskMainHeader />
+        <TodoTaskContent onRemoveTask={onRemoveTask} tasks={tasks} />
       </div>
     </div>
   );

@@ -4,12 +4,16 @@ import style from './TodoTask.module.scss';
 import EmptyTodo from '../emptyTodo/EmptyTodo';
 import Todos from '../Todos/Todos';
 
-const TodoTaskContent = ({ tasks, onSetTask }) => {
+const TodoTaskContent = ({ tasks, onRemoveTask }) => {
   const task = true;
 
   return (
     <div className={style.container}>
-      {task ? <Todos tasks={tasks} onSetTask={onSetTask} /> : <EmptyTodo />}
+      {task ? (
+        <Todos tasks={tasks} onRemoveTask={onRemoveTask} />
+      ) : (
+        <EmptyTodo />
+      )}
     </div>
   );
 };

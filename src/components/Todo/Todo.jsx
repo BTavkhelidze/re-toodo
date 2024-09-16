@@ -3,24 +3,12 @@ import style from './Todo.module.scss';
 import complated from '../../assets/complated.svg';
 import uncomplated from '../../assets/uncomplated.svg';
 import delate from '../../assets/delate.svg';
-const Todo = ({ children, task, onSetTask }) => {
+const Todo = ({ children, task, onRemoveTask }) => {
   console.log(task);
 
   return (
     <div className={style.container}>
-      <div
-        onClick={() => {
-          let id = task.id;
-          onSetTask((prevTasks) => {
-            prevTasks.map((el) => {
-              if (el.id === id) {
-                return { ...el, completed: !el.completed };
-              }
-              return el;
-            });
-          });
-        }}
-      >
+      <div>
         {task.completed ? (
           <img src={complated} alt='' />
         ) : (
@@ -28,7 +16,13 @@ const Todo = ({ children, task, onSetTask }) => {
         )}
       </div>
       {children}
-      <img src={delate} alt='' />
+      <img
+        src={delate}
+        alt=''
+        onClick={() => {
+          onRemoveTask(task.id);
+        }}
+      />
     </div>
   );
 };

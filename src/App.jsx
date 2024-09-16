@@ -15,6 +15,24 @@ function App() {
     setTasks(data);
   };
 
+  const removeTask = async (id) => {
+    const url = `http://localhost:3500/tasks/${id}`;
+    const options = {
+      method: 'DELETE',
+      header: {
+        'Content-type': 'application/json',
+      },
+    };
+    const data = await apiRequest(url, options);
+    if (data.error) {
+      console.error(data.error);
+    } else {
+      setTasks((prev) => prev.filter((tasks) => tasks.id !== id));
+    }
+
+    // ?setTasks((prev) => prev.filter((tasks) => tasks.id !== id));
+  };
+
   useEffect(() => {
     getFetch();
   }, []);
@@ -23,7 +41,7 @@ function App() {
     <>
       <Logo />
       <AddTodoForm onSetTask={setTasks} tasks={tasks} />
-      <TaskMain onSetTask={setTasks} tasks={tasks} />
+      <TaskMain onRemoveTask={removeTask} tasks={tasks} />
     </>
   );
 }
