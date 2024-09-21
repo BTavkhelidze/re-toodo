@@ -3,12 +3,16 @@ import style from './Todo.module.scss';
 import complated from '../../assets/complated.svg';
 import uncomplated from '../../assets/uncomplated.svg';
 import delate from '../../assets/delate.svg';
-const Todo = ({ children, task, onRemoveTask }) => {
+const Todo = ({ children, task, onRemoveTask, toggleComplated }) => {
   console.log(task);
 
   return (
     <div className={style.container}>
-      <div>
+      <div
+        onClick={() => {
+          toggleComplated(task.id);
+        }}
+      >
         {task.completed ? (
           <img src={complated} alt='' />
         ) : (

@@ -1,9 +1,15 @@
 import React from 'react';
 import style from './AddButton.module.scss';
 
-const AddButton = () => {
+const AddButton = ({ onNewTodoBtn, onSetaddTodo, addTodo }) => {
   return (
-    <button type='submit' className={style.container}>
+    <button
+      type='submit'
+      className={style.container}
+      onClick={() => {
+        onNewTodoBtn();
+      }}
+    >
       {' '}
       <span className={style.add}>Add</span>{' '}
       <svg
