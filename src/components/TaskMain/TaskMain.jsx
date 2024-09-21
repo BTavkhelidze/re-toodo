@@ -7,7 +7,7 @@ const TaskMain = ({ onRemoveTask, tasks, toggleComplated }) => {
   return (
     <div className={style.mainContaine}>
       <div className={style.mainContent}>
-        <TaskMainHeader />
+        <TaskMainHeader tasks={tasks} />
         <TodoTaskContent
           onRemoveTask={onRemoveTask}
           tasks={tasks}

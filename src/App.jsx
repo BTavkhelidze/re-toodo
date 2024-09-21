@@ -10,6 +10,10 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const [addTodo, setaddTodo] = useState('');
 
+  console.log(tasks);
+  console.log(tasks.length);
+  // console.log(tasks.isComplated.length);
+
   const getFetch = async () => {
     const url = 'http://localhost:3500/tasks';
     const data = await apiRequest(url);
